@@ -112,7 +112,7 @@ Access in browser: `http://127.0.0.1:5001`
 
 ## 🎨 Screenshots
 
-![Cute Todo Screenshot]((https://drive.google.com/drive/folders/1DJQaEL-4xieXgoU2XmpbW0iMdCoZ6Ub8?usp=drive_link))
+(https://drive.google.com/drive/folders/1DJQaEL-4xieXgoU2XmpbW0iMdCoZ6Ub8?usp=drive_link)
 
 ---
 
