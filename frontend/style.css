@@ -1,0 +1,195 @@
+/* General body */
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: #fff0f5;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 20px;
+  background: #ffb6c1;
+  border-bottom: 3px solid #ffc0cb;
+  border-radius: 0 0 15px 15px;
+  position: relative;
+  color: white;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  text-align: center;
+}
+
+/* Dark/Light toggle */
+.switch {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  width: 70px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: black;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+  font-size: 1.2rem;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: .4s;
+  z-index: 2;
+}
+
+input:checked + .slider:before {
+  transform: translateX(36px);
+}
+
+.slider .sun,
+.slider .moon { pointer-events: none; }
+
+/* Status */
+#status { margin: 10px; font-size: 1rem; }
+
+/* Progress bar */
+.progress-container {
+  width: 80%;
+  height: 12px;
+  background: #ffe4e1;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0;
+  background: #ff69b4;
+  border-radius: 10px;
+}
+
+/* Task input */
+.task-input {
+  margin: 20px;
+}
+
+.task-input input, select, button {
+  border-radius: 12px;
+  border: 1px solid #ff69b4;
+  outline: none;
+}
+
+.task-input input {
+  width: 200px;
+  padding: 8px;
+}
+
+.task-input select {
+  padding: 8px;
+}
+
+button#add-task {
+  background: #ff69b4;
+  color: white;
+  font-weight: bold;
+  padding: 12px 20px;   /* bigger */
+  font-size: 1.2rem;    /* bigger */
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button#add-task:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Task list */
+ul { list-style: none; padding: 0; }
+
+li {
+  background: #ffe4e1;
+  margin: 10px auto;
+  padding: 10px 15px;
+  width: 80%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
+  font-size: 1.1rem;
+}
+
+/* Edit/Delete buttons bigger */
+li button.edit,
+li button.delete {
+  padding: 8px 16px;    /* bigger */
+  font-size: 1.1rem;    /* bigger */
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+li button.edit {
+  background: #ffd966;
+  color: #333;
+}
+li button.edit:hover { transform: scale(1.1); }
+
+li button.delete {
+  background: #ff6f91;
+  color: white;
+}
+li button.delete:hover { transform: scale(1.1); }
+
+/* Checkbox bigger */
+li input[type="checkbox"] { width: 20px; height: 20px; }
+
+/* Dark mode */
+.dark-mode {
+  background: #333;
+  color: #fff;
+}
+
+.dark-mode header { background: #8a2be2; }
+.dark-mode .task-input input,
+.dark-mode .task-input select,
+.dark-mode button { border-color: #dda0dd; }
+
+.dark-mode li { background: #663399; color: white; }

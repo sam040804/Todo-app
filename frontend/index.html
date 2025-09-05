@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🐰 Cute To-Do List</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>🌸 Cute To-Do List 🐰🌸</h1>
+    <label class="switch">
+  <input type="checkbox" id="theme-toggle">
+  <span class="slider round">
+    <span class="sun">🌞</span>
+    <span class="moon">🌙</span>
+  </span>
+</label>
+
+  </header>
+
+  <div id="status">🔓 Online</div>
+
+  <div class="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+
+  <div class="task-input">
+    <input type="text" id="task-input" placeholder="✏️ Add a new task..."/>
+    <select id="priority">
+      <option value="low">🍃 Low</option>
+      <option value="medium">🌼 Medium</option>
+      <option value="high">🌟 High</option>
+    </select>
+    <input type="date" id="due-date"/>
+    <button id="add-task">➕ Add</button>
+  </div>
+
+  <ul id="task-list"></ul>
+
+  <script src="app.js"></script>
+</body>
+</html>
